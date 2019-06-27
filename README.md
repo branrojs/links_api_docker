@@ -1,4 +1,4 @@
-#Information about files:
+# Information about files:
 ## Run.sh
 * Pulls the code from https://github.com/branrojs/LinksApi.git, set configuration to the database, request the password due to a sudo command to delete the pids to build up the api services. Finally, starts the docker-compose file.
 
