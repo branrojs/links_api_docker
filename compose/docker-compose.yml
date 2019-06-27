@@ -1,0 +1,22 @@
+version: '3'
+services:
+  Linkapp:
+    image: "linksapi"
+    build: ../images/ruby
+    ports:
+      - "8081:3000"
+    volumes:
+      - ../app:/app
+    links: 
+      - dbp
+    ports:
+      - "8081:3000"
+  
+  dbp:
+    image: "postgres"
+    environment:
+      - POSTGRES_USER=oveja
+      - POSTGRES_PASSWORD=oveja 
+      - POSTGRES_DB=linksApi_dev
+    ports:
+      - "5433:5432"
